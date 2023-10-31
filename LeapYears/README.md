@@ -1,18 +1,8 @@
-## Getting Started
+## Objetivo
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+In this task you should simply determine, whether a given year is a leap year or not. In case you don't know the rules, here they are:
 
-## Folder Structure
-
-The workspace contains two folders by default, where:
-
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+Years divisible by 4 are leap years,
+but years divisible by 100 are not leap years,
+but years divisible by 400 are leap years.
+Tested years are in range 1600 ≤ year ≤ 4000.
