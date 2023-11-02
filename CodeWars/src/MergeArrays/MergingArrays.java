@@ -4,8 +4,6 @@ import java.util.List;
 
 public class MergingArrays {
   public static int[] mergeArrays(int[] first, int[] second) {
-    int primeiroArray = first.length;
-    System.out.println(primeiroArray);
 
     List<Integer> lista = new ArrayList<>();
 
@@ -17,8 +15,33 @@ public class MergingArrays {
       lista.add(i);
     }
 
-    System.out.println(lista);
+    int firstLength = first.length;
+    int secondLength = second.length;
 
-		return first;
+    int[] merged = new int[firstLength + secondLength];
+
+    int firstPosition, secondPosition, mergedPosition;
+
+    firstPosition = secondPosition = mergedPosition = 0;
+
+    while(firstPosition < firstLength && secondPosition < secondLength) {
+      if(first[firstPosition] < second[secondPosition]) {
+        merged[mergedPosition++] = first[firstPosition++];
+      } else {
+        merged[mergedPosition++] = second[secondPosition++];
+      }
+    }
+
+    while(firstPosition < firstLength) {
+      merged[mergedPosition++] = first[firstPosition++];
+    }
+    
+    while(secondPosition < secondLength) {
+      merged[mergedPosition++] = second[secondPosition++];
+    }
+    
+    System.out.println(merged);
+
+		return merged;
 	}
 }
